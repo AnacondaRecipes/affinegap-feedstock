@@ -12,7 +12,7 @@ source:
 
 build:
   number: 2
-  script: {{ PYTHON }} -m pip install . -vv
+  script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
 
 requirements:
   build:
@@ -21,22 +21,30 @@ requirements:
     - cython
     - pip
     - python
+    - setuptools
+    - wheel
   run:
     - python
 
 test:
   imports:
     - affinegap
-  commands:
-    - pip check
   requires:
     - pip
+  commands:
+    - pip check
 
 about:
-  home: https://github.com/datamade/affinegap
+  home: https://github.com/dedupeio/affinegap
   summary: A Cython implementation of the affine gap string distance
+  description: |
+    A Cython implementation of the affine gap penalty string distance
+    also known as the Smith–Waterman algorithm
   license: MIT
   license_file: LICENSE
+  license_family: MIT
+  doc_url: https://github.com/dedupeio/affinegap
+  dev_url: https://github.com/dedupeio/affinegap
 
 extra:
   recipe-maintainers:
