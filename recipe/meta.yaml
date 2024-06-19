@@ -8,7 +8,7 @@ package:
 
 source:
   # Use upstream archive tarball for tests
-  url: https://github.com/dedupeio/affinegap/archive/refs/tags/v1.12.tar.gz
+  url: https://github.com/dedupeio/affinegap/archive/refs/tags/v{{ version}}.tar.gz
   sha256: 2bf275b6d8b083bdb32b16fd4e4a55025eaad2ef6f325d3f0b0cdf8253608aaf
 
 build:
